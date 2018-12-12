@@ -34,5 +34,7 @@ public class GoogleTests extends BaseTest {
         Assertions.assertTrue(resultPage.contains(pageUrl));
         Assertions.assertTrue(resultPage.containsResultWithTitle(pageUrl, pageTitle));
     }
+
+
 }
 

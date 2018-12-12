@@ -95,8 +95,6 @@ public class WordPresTestsRafal {
 
                 .filter(c -> c.findElement(By.cssSelector(".comment-content > p")).getText().equals(comment));
 
-
-
         Assertions.assertEquals(1, comments.count(), "Exactly one matching comment is published");
 
     }
