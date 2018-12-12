@@ -26,7 +26,6 @@ public class WordPressTest {
     public void przesunieciescrolla(WebElement doelementu) {
 
         JavascriptExecutor je = (JavascriptExecutor) driver;
-
         je.executeScript("arguments[0].scrollIntoView(true);",doelementu);
 
     }
