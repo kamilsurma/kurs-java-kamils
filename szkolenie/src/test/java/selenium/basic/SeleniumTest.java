@@ -60,8 +60,6 @@ public class SeleniumTest {
         WebElement author  = driver.findElement(By.cssSelector(".author > a"));
         Assertions.assertEquals("Rafał", author.getText() , "proper author name is displayed");
         Assertions.assertEquals("http://markowicz.pro/author/rafal-markowicz/",author.getAttribute("href"), "Valid author URL is displayed");
-
-
     }
 
     @Test
