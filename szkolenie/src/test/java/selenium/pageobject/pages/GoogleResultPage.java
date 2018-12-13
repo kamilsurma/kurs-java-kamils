@@ -19,7 +19,6 @@ public class GoogleResultPage {
     public boolean contains(String resutlUrl) {
 
         Stream<WebElement> results = getResultByUrl(resutlUrl);
-
         if (results.count() > 0) {
             return true;
         } else {

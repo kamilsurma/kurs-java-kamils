@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -25,6 +26,10 @@ public class BaseTest {
     @AfterEach
     public void closeDriver() {
         driver.close();
+    }
+
+    protected String generateRandomText() {
+        return UUID.randomUUID().toString();
     }
 
 }

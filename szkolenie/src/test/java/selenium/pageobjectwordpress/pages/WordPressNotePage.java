@@ -1,4 +1,4 @@
-package selenium.pageobject.pages;
+package selenium.pageobjectwordpress.pages;
 
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import java.util.UUID;
 import java.util.stream.Stream;
 
-public class WordPressResultPage {
+public class WordPressNotePage {
 
 
     private final WebDriver wprpDriver;
@@ -19,7 +19,7 @@ public class WordPressResultPage {
 
     String email = UUID.randomUUID() + "@test.com";
 
-    public WordPressResultPage(WebDriver  driver) {
+    public WordPressNotePage(WebDriver  driver) {
        wprpDriver = driver;
     }
 

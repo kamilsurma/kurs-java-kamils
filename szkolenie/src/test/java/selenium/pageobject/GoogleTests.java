@@ -1,11 +1,16 @@
 package selenium.pageobject;
 
 import org.junit.jupiter.api.Assertions;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import selenium.pageobject.pages.GoogleMainPage;
 import selenium.pageobject.pages.GoogleResultPage;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 public class GoogleTests extends BaseTest {
+
 
     @Test
     public void canFindScrumOrgOnGoogle() {
@@ -19,10 +24,13 @@ public class GoogleTests extends BaseTest {
         GoogleResultPage resultPage = googlePage.search("Scrum.org");
 
         // Assert Scrum.org page is found
-        Assertions.assertTrue(resultPage.contains(pageUrl));
-        Assertions.assertTrue(resultPage.containsResultWithTitle(pageUrl, pageTitle),
+        assertTrue(resultPage.contains(pageUrl));
+        assertTrue(resultPage.containsResultWithTitle(pageUrl, pageTitle),
                 "Scrum.org page has correct title");
     }
+
+
+
 
     @Test
     public void canFindCodeSprinters() {
@@ -31,8 +39,8 @@ public class GoogleTests extends BaseTest {
 
         GoogleMainPage googlePage = new GoogleMainPage(driver);
         GoogleResultPage resultPage = googlePage.search("Code Sprinters");
-        Assertions.assertTrue(resultPage.contains(pageUrl));
-        Assertions.assertTrue(resultPage.containsResultWithTitle(pageUrl, pageTitle));
+        assertTrue(resultPage.contains(pageUrl));
+        assertTrue(resultPage.containsResultWithTitle(pageUrl, pageTitle));
     }
 
 
