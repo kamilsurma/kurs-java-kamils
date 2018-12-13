@@ -2,8 +2,13 @@ package selenium.pagesautomatyzacja.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import selenium.pageobject.BaseTest;
 
-public class BlogLoginPage {
+import java.util.concurrent.TimeUnit;
+
+public class BlogLoginPage extends BaseTest {
 
 
     private final WebDriver driver;
@@ -18,8 +23,13 @@ public class BlogLoginPage {
     public BlogLoginPage(WebDriver driver) {
         this.driver = driver;
         driver.get(URL_BLOG_PAGE);
+        WebDriverWait webDriverWait = new WebDriverWait(driver, 20);
+        webDriverWait.until(ExpectedConditions.visibilityOf(driver.findElement(LOGIN_BOX)));
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(LOGIN_BUTTON));
         driver.findElement(LOGIN_BOX).sendKeys(USER);
         driver.findElement(PASSWORD_BOX).sendKeys(PASSWORD);
         driver.findElement(LOGIN_BUTTON).submit();
+
+
     }
 }
